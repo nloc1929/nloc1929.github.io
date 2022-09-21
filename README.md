@@ -1,3 +1,1 @@
-# nloc1929.github.io
-
-#nicholaslockedeveloper.io
+[Link to Website](https://nicholaslockedeveloper.me/)
