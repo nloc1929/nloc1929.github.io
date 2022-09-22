@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Native Australian animals information including their scientific names, brief descriptions and fun facts."/>
+    <meta name="keywords" content="Australia, animals, wildlife, australian mammals, cockatoo, lorikeet, kookaburra, magpie, koala, kangaroo, wombat, platypus, animal facts, endangered species, threatened animals, native animals"/>
+    <meta property="og:title" content="Native Australian Fish"/>
+    <meta property="og:site_name" content="Australian Animals"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_AU"/>
+    <!--Responsive Meta Tag for Mobile Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Australian Fish</title>
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+  </head>
+  <!-- BODY SECTION-->
+  <body>
+  <!--Div class "container" for all visible content-->
+  <div class="container">
+    <!-- HEADER SECTION-->
+    <header>
+      <span id="photoCredit">Photo: Josh Withers</span>
+      <!--Header Text-->
+      <div class="header-title">
+        <h1>Australian Fish</h1>
+      </div>
+      <!--Navigation Bar-->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="birds.html">Birds</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="mammals.html">Mammals</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="fish.html">Fish</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="reptiles.html">Reptiles</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sighting_form.html">Sighting Form</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="faq.html">FAQS</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <form class="d-flex justify-content-end">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </nav>
+    </header>
+    <!-- Secondary Navigation Buttons-->
+    <nav aria-label="Bird-navigation">
+      <ul class="pagination justify-content-end">
+        <li class="page-item disabled"><a class="page-link">Fish</a></li>
+        <li class="page-item"><a class="page-link" href="fish/barramundi.html">Barramundi</a></li>
+        <li class="page-item"><a class="page-link" href="fish/mangroveJack.html">Mangrove Jack</a></li>
+        <li class="page-item"><a class="page-link" href="fish/murrayCod.html">Murray Cod</a></li>
+        <li class="page-item"><a class="page-link" href="fish/australianBass.html">Australian Bass</a></li>
+      </ul>
+    </nav>
+    <!-- Logo Overlay Section -->
+    <div id="overlay">
+      <div class="logo">
+        <img src="images/Australian_Animals_Logo.jpg" alt="Australian Animals Logo" id="logo">
+      </div>
+    </div>
+    <!-- Animal Menu Section -->
+    <div class = "animalmenu">
+      <!-- Animal Image Link 1 -->
+      <div class = "animalimages">
+        <a href="fish/barramundi.html">
+          <img src="images/Barramundi-Lates_calcarifer,_2014-09-19a.jpg" alt="Barramundi"/>
+          <p>Barramundi</p>
+        </a>
+      </div>
+      <!-- Animal Image Link 2 -->
+      <div class = "animalimages">
+        <a href="fish/mangroveJack.html">
+          <img src="images/Mangrovejack.jpg" alt="Mangrove Jack"/>
+          <p>Mangrove Jack</p>
+        </a>
+      </div>
+      <!-- Animal Image Link 3 -->
+      <div class = "animalimages">
+        <a href="fish/murrayCod.html">
+          <img src="images/Murray_cod02_melb_aquarium.jpg" alt="Murray Cod"/>
+          <p>Murray Cod</p>
+        </a>
+      </div>
+      <!-- Animal Image Link 4 -->
+      <div class="animalimages">
+        <a href="fish/australianBass.html">
+          <img src="images/Australian Bass 640px-Steindachner_(1866).png" alt="Australian Bass"/>
+          <p>Australian Bass</p>
+        </a>
+      </div>
+    </div>
+    <!--Footer Information-->
+    <footer>
+      <div class="container2">
+        <p><a href="index.html">Home Page</a><a href="about.html">About Us</a><a href="contact.html">Contact Us</a></p>
+        <p>&copy <span id="date_year"></span> - Nicholas Locke</p>
+      </div>
+    </footer>
+    <!-- JAVASCRIPT FUNCTION TO DISPLAY CURRENT YEAR -->
+    <script>
+      const getYear = new Date();
+      document.getElementById('date_year').textContent = getYear.getFullYear();
+    </script>
+    <!-- Bootstrap Bundle with Popper (JavaScript Plugin) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </div>
+  </body>
+</html>
