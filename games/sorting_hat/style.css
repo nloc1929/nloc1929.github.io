@@ -1,0 +1,764 @@
+
+/*=========================================================== GENERAL SETUP ===================================================================*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+}
+#page {
+    max-width: 100%;
+    background-color: #000;
+}
+
+:root {
+    --goldColor: linear-gradient(gold, goldenrod);
+    --boneWhite: #faf6f0;
+}
+
+/* BACKGROUND IMAGES */
+
+/* 1A: background: url(images/moon-stars-hamish-weir.jpg) no-repeat fixed; */
+/* 2A: background: url(images/daw-dusk-chris-galbraith.jpg) no-repeat fixed; */
+/* 2B: background: url(images/woods-photo-zack-silver.jpg) no-repeat fixed; */
+/* 3A: background: url(images/treasure-chest-jouwen-wang.jpg) no-repeat center fixed; */
+/* 3B: background: url(images/goblet-james-coleman.jpg) no-repeat fixed; */
+/* 4A: background: url(images/troll-fight.png) no-repeat fixed; */
+/* 4B: background: url(images/Magical-Garden_1920x1080.png) no-repeat fixed; */
+/* 5A: background: url(images/cobblestones-leif-niemczik.jpg) no-repeat center fixed; */
+/* 5B: background: url(images/shrunken-heads-aditya-vyas.jpg) no-repeat center fixed; */
+/* 6A: background: url(images/dursleys-2.png) no-repeat center fixed; */
+/* 6B: background: url(images/fantasy-large.jpg) no-repeat center fixed; */
+/* 7A: background: url(images/hogwarts-photo-aditya-vyas.jpg) no-repeat center fixed; */
+/* 7B: background: url(images/potion-artem-maltsev.jpg) no-repeat center fixed; */
+/* 8A: background: url(images/great-hall-2.png) no-repeat center fixed; */
+/* 8B: background: url(images/library-statues-giammarco.jpg) no-repeat center fixed; */
+/* 9A: background: url(images/angry-dumbledore.jpg) no-repeat center fixed; */
+
+
+/*============================================================== ANIMATIONS ===================================================================*/
+
+/* KEYFRAME ANIMATION */
+@keyframes fadeInBack {
+    0%   {background-image: none}
+    50%  {background-image: none} 
+    99%  {background-image: none}
+    100% {background-image: inherit}
+}
+@keyframes fadeIn {
+    0%   {opacity: 0}
+    50%  {opacity: 0} 
+    99%  {opacity: 0}
+    100% {opacity: 1}
+}
+@keyframes example {
+    0%   {top:0%;}
+    25%  {top:500%;}
+    50%  {top:0%;}
+    75%  {top:500%;}
+    100% {top:0%;}
+}
+
+
+/*========================================================= RESPONSIVE LAYOUT =================================================================*/
+
+/*RESPONSIVE LAYOUT*/
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */ 
+@media screen and (max-width: 40em) {
+    #page {
+        max-width: 40em;
+    }
+  }
+  /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */ 
+  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    #page {
+        max-width: 64em;
+        min-width: 40.063em;
+    }
+  } 
+  /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */ 
+  @media only screen and (min-width: 64.063em) and (max-width: 90em) {
+    #page {
+        max-width: 64.063em;
+        min-width: 90em;
+    }
+  } 
+
+
+/*============================================================ MAIN CONTENT ==================================================================*/
+
+/* TITLE IMAGE (SORTING HAT QUIZ) */
+.title-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.title-image img {
+    width: 50%;
+}
+#question-count1, #question-count2 {
+    color: #FFF;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+}
+
+/* OPENING MODAL SCREEN */
+.modal-opening {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px 20px 60px 20px;
+    border: 2px solid #fefefe;
+    color: #FFF;
+    border-radius: 10px;
+    width: 80%;
+    height: 80%;
+}
+.subtitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #FFF;
+    font-size: 22px;
+}
+.sortingHatIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sortingHatIcon img {
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+.gameDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    margin-top: 50px;
+}
+.gameDescription h2 {
+    margin: auto;
+    color: #FFF;
+    font-size: 36px;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+}
+
+
+/* QUESTION 1 CSS (2-PART QUESTION) */
+/* 1: MOON OR STARS? */
+.question1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(images/moon-stars-hamish-weir.jpg) no-repeat fixed;
+    padding: 20px;
+    height: 550px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+.question1 h2 {
+    color: #FFF;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.question1 .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 0px;
+    width: 50%;
+}
+.buttons button {
+    padding: 30px;
+    margin: 10px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    font-size: 16px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.buttons button:hover {
+    box-shadow: #FFF 0px 0px 10px 10px;
+    filter: brightness(1.1);
+    background: none;
+    color: var(--boneWhite);
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+
+/* QUESTION 2 CSS (2-PART QUESTION) */
+/* 2A: DUSK OR DAWN? */
+/* 2B: FOREST OR RIVER? */
+.question2 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 550px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+.question2 h2 {
+    color: #FFF;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.question2 .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+}
+
+
+/* QUESTION 3 CSS (4-PART QUESTION) */
+/* 3A: FOUR CHESTS */
+/* 3B: FOUR GOBLETS */
+.question3 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px 100px 20px;
+    height: 570px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+.question3 h2 {
+    color: #FFF;
+    text-align: center;
+    margin-top: 80px;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+
+/* QUESTION 4 CSS (4-PART QUESTION) */
+/* 4A: BRIDGE TROLL FIGHT */
+/* 4B: MAGICAL GARDEN */
+.question4 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px 100px 20px;
+    height: 650px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+.question4 h2 {
+    color: #FFF;
+    text-align: center;
+    margin-top: 80px;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+#answer-4A, #answer-4B, #answer-4C, #answer-4D {
+    height: 160px;
+    min-height: 160px;
+}
+
+
+/* BUTTONS CLASS FROM Q3 -> Q6 */
+.buttons-row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 0px;
+    width: 70%;
+    max-width: 100%;
+}
+.buttons-row button {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    width: 300px;
+    height: 240px;
+    min-width: 160px;
+    min-height: 240px;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.buttons-row button:hover {
+    box-shadow: #FFF 0px 0px 10px 10px;
+    background: none;
+    color: var(--boneWhite);
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+
+/* QUESTION 5 CSS (4-PART QUESTION) */
+/* 5A: REMEMBERED AFTER YOUR DEATH */
+/* 5B: WHICH NIGHTMARE? */
+
+/* QUESTION 6 CSS (4-PART QUESTION) */
+/* 6A: A MUGGLE CONFRONTS YOU AND ACCUSES YOU OF BEING A WITCH/WIZARD. DO YOU? */
+/* 6B: LATE AT NIGHT YOU HEAR A MAGICAL CRY. DO YOU? */
+
+/* QUESTION 7 CSS (4-PART QUESTION) */
+/* 7A: WHICH ROAD TEMPTS YOU THE MOST? */
+/* 7B: GIVEN THE CHOICE, WOULD YOU INVENT A POTION THAT... */
+
+/* QUESTION 8 CSS (4-PART QUESTION) */
+/* 8A: WHICH OF THE FOLLOWING WOULD YOU HATE PEOPLE TO CALL YOU? */
+/* 8B: HOW WOULD YOU LIKE TO BE KNOWN TO HISTORY? */
+.question5, .question6, .question7, .question8 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 20px 100px 20px;
+    height: 570px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+.question5 h2, .question6 h2, .question7 h2, .question8 h2 {
+    color: #FFF;
+    text-align: center;
+    margin-top: 60px;
+    width: 70%;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+
+/* QUESTION 9 CSS (2-PART QUESTION) */
+/* 9A: DID YOU PUT YOUR NAME INTO THE GOBLET OF FIRE? */
+.question9 {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(images/angry-dumbledore.jpg) no-repeat center fixed;
+    padding: 20px;
+    height: 550px;
+    font-family: 'Cinzel Decorative', cursive;
+}
+.question9 h2 {
+    color: #FFF;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.question9 .buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 50%;
+}
+
+
+/* BUTTONS CLASS FROM Q7 -> Q9 */
+.buttons-row-small {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    gap: 0px;
+    width: 50%;
+    max-width: 90%;
+}
+.buttons-row-small button {
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    width: 200px;
+    height: 160px;
+    min-width: 160px;
+    min-height: 160px;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.buttons-row-small button:hover {
+    box-shadow: #FFF 0px 0px 10px 10px;
+    background: none;
+    color: var(--boneWhite);
+    background-color: rgb(0, 0, 0, 0.7);
+}
+
+
+/*============================================================ ENDGAME MODAL =================================================================*/
+
+/* ENDGAME MODAL CSS */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto;
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 2px solid #fefefe;
+    color: #FFF;
+    border-radius: 10px;
+    width: 80%;
+    animation: fadeInBack 8.5s ease-in;
+}
+.close, .close1 {
+    color: rgb(91, 91, 91);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover, .close1:hover,
+.close:focus, .close1:focus {
+    color: #FFF;
+    text-decoration: none;
+    cursor: pointer;
+}
+#modalScreen, #endScreen {
+    background-color: #000;
+}
+
+
+/* MODAL MAIN CONTENT */
+/* THREE TRAITS OF EACH HOUSE */
+.traits {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    color: #FFF;
+    animation: fadeIn 8.5s ease-in;
+}
+/* FINAL HOUSE NAME CSS */
+.finalResult {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    margin-top: 50px;
+}
+.finalResult h2 {
+    margin: auto;
+    color: #FFF;
+    font-size: 36px;
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    animation: fadeIn 8.5s ease-in;
+}
+/* SORTING HAT ICON CSS */
+.finalResultImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.finalResultImg img {
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4.25s;
+    animation-iteration-count: 2;
+}
+
+/* HOUSE CREST ICON */
+.houseCrest {
+    animation: fadeIn 8.5s ease-in;
+}
+/* WELCOME TO [HOUSE NAME] */
+.welcomeMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 8.5s ease-in;
+}
+.welcomeMessage p {
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: bold;
+    font-variant: uppercase;
+    text-align: center;
+    font-size: 24px;
+    margin: auto;
+}
+/* BRIEF DESCRIPTION OF HOUSE */
+.houseDescription {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 8.5s ease-in;
+}
+.houseDescription p {
+    width: 70%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #faf6f0;
+}
+
+/* FOUR HOUSES PERCENTAGE STATS CSS */
+.scoreDisplay {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 5px;
+    margin: 10px;
+    animation: fadeIn 8.5s ease-in;
+}
+.scoreDisplay div {
+    background-color: rgb(30, 30, 30);
+    margin: 5px;
+    width: 38%;
+    height: 30%;
+    max-width: 100%;
+    max-height: 20%;
+    padding: 10px;
+    border-style: solid;
+    border-color: #fefefe;
+    border-radius: 20px;
+}
+.scoreDisplay h2 {
+    color:#f4f7f8;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    background-color: rgb(0, 0, 0, 0.4);
+    padding: 10px 5px;
+    border-radius: 10px;
+    max-width: 90%;
+    width: 90%;
+}
+.scoreDisplay p {
+    margin: auto;
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+
+}
+#gryffScore {
+    background-image: linear-gradient(rgba(161, 17, 17, 0.957), rgb(67, 1, 1));
+}
+#ravenScore {
+    background-image: linear-gradient(rgb(0, 73, 79), rgb(0, 0, 78));
+}
+#huffleScore {
+    background-image: linear-gradient(goldenrod, rgb(101, 39, 0));
+}
+#slythScore {
+    background-image: linear-gradient(#002009, rgb(1, 59, 38));
+}
+
+/* HOUSE QUOTE SECTION */
+.quoteContent {
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+    color:#faf6f0;
+    margin: auto;
+    margin-bottom: 0px;
+    animation: fadeIn 8.5s ease-in;
+}
+.quotePerson {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 8.5s ease-in;
+}
+.quotePerson, .quotePerson p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color:#faf6f0;
+    padding: 0px 0px 5px 0px;
+    margin: 0px;
+}
+.quoteSource p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    color:#faf6f0;
+    margin: auto;
+    margin-bottom: 20px;
+    animation: fadeIn 8.5s ease-in;
+}
+
+/* PLAY AGAIN BUTTON TO RESET */
+.playAgain, .playGame {
+    display: flex;
+}
+.playAgain button, .playGame button {
+    margin: auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin-top: 20px;
+    background-image: linear-gradient(gold, goldenrod);
+}
+.playAgain button:hover, .playGame button:hover {
+    transform: scale(1.1);
+    border-style: solid;
+    border-color: black;
+    cursor: pointer;
+    filter: contrast(1.5);
+}
+
+
+
+/*============================================================= CREDITS PAGE =================================================================*/
+
+/* HOME IMAGE (SORTING HAT IMAGE LINK) */
+.home-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.home-image img {
+    width: 50%;
+}
+
+/* CREDITS HEADINGS CSS */
+.credit-heading {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    margin-top: 30px;
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    color: #FFF;
+    border-style: solid;
+    border-color: #FFF;
+    border-radius: 10px;
+}
+#copyrightHeading {
+    padding: 10px;
+    color: gold;
+    border-color: gold;
+}
+.copyrightInfo {
+    font-size: 24px;
+    text-align: center;
+    margin: 10px 20px;
+    color: gold;
+}
+
+/* CREDITS TEXT AND MEDIA CSS */
+.creditsText {
+    font-family: 'Roboto', sans-serif;
+    color: #FFF;
+    margin-top: 30px;
+}
+.creditsText a {
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    transition: 0.2s;
+}
+.creditsText a:hover {
+    filter: brightness(1.1);
+    text-shadow: #f4f7f8 5px;
+}
+.credit-image {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+.credit-image li {
+    list-style-type: none;
+}
+.credit-audio {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+.credit-audio li {
+    list-style-type: none;
+}
+.creditsExample {
+    margin: 10px;
+    border-radius: 5px;
+}
+.creditsExample img {
+    max-width: 90%;
+}
+.creditsExample audio {
+    margin-top: 35px;
+}
+
+
+/*=============================================================== FOOTER =====================================================================*/
+
+/* FOOTER */
+.mainFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #000;
+    color: #FFF;
+    font-family: 'Roboto', sans-serif;
+}
+.mainFooter p {
+    text-align: center;
+    margin: 2px;
+    padding: 0px;
+}
+.mainFooter a {
+    text-decoration: none;
+    color: gold;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.2s;
+}
+.mainFooter a:hover {
+    filter: brightness(1.1);
+    text-shadow: #f4f7f8 5px;
+}

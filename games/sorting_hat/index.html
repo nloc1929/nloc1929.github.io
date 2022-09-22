@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sorting Hat Quiz | QUIZ</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+        <script src="script.js"></script>
+    </head>
+    <body onload="openStartModal()">
+        <div id="page">
+            <div class="title-image">
+                <span id="question-count1">1 / 9</span>
+                <img src="images/Title-image-1.jpg" alt="Sorting Hat Quiz">
+                <span id="question-count2">1 / 9</span>
+            </div>
+            <!-- STARTGAME MODAL -->
+            <div id="startModal" class="modal">
+                <div class="modal-opening" id="modalScreen">
+                    <span class="close1">&times;</span>
+                    <div class="subtitle">
+                        <p>Sorting Hat Quiz</p>
+                    </div>
+                    <div class="sortingHatIcon">
+                        <img src="images/Sorting-Hat-icon.png" alt="The Sorting Hat">
+                    </div>
+                    <div class="gameDescription">
+                        <h2>Answer Nine Questions</h2>
+                        <h2>to get Sorted into your Hogwarts House</h2>
+                    </div>
+                    <div class="playGame">
+                        <button id="playGame">PLAY GAME</button>
+                    </div>
+                </div>
+            </div>
+            <div class="question1">
+                <h2>Moon or Stars?</h2>
+                <div class="buttons">
+                    <button type="button" id="answer-1A" onclick="answer1A(), playAudio()">Moon</button>
+                    <button type="button" id="answer-1B" onclick="answer1B(), playAudio()">Stars</button>
+                </div>
+            </div>
+            <div class="question2">
+                <h2 id="question-2"></h2>
+                <div class="buttons">
+                    <button type="button" id="answer-2A" onclick="answer2A(), playAudio()"></button>
+                    <button type="button" id="answer-2B" onclick="answer2B(), playAudio()"></button>
+                </div>
+            </div>
+            <div class="question3">
+                <h2 id="question-3"></h2>
+                <div class="buttons-row">
+                    <button type="button" id="answer-3A" onclick="answer3A(), playAudio()"></button>
+                    <button type="button" id="answer-3B" onclick="answer3B(), playAudio()"></button>
+                </div>
+                <div class="buttons-row">
+                    <button type="button" id="answer-3C" onclick="answer3C(), playAudio()"></button>
+                    <button type="button" id="answer-3D" onclick="answer3D(), playAudio()"></button>
+                </div>
+            </div>
+            <div class="question4">
+                <h2 id="question-4"></h2>
+                <div class="buttons-row">
+                    <button type="button" id="answer-4A" onclick="answer4A(), playAudio()"></button>
+                    <button type="button" id="answer-4B" onclick="answer4B(), playAudio()"></button>
+                </div>
+                <div class="buttons-row">
+                    <button type="button" id="answer-4C" onclick="answer4C(), playAudio()"></button>
+                    <button type="button" id="answer-4D" onclick="answer4D(), playAudio()"></button>
+                </div>
+            </div>
+            <div class="question5">
+                <h2 id="question-5"></h2>
+                <div class="buttons-row">
+                    <button type="button" id="answer-5A" onclick="answer5A(), playAudio()"></button>
+                    <button type="button" id="answer-5B" onclick="answer5B(), playAudio()"></button>
+                </div>
+                <div class="buttons-row">
+                    <button type="button" id="answer-5C" onclick="answer5C(), playAudio()"></button>
+                    <button type="button" id="answer-5D" onclick="answer5D(), playAudio()"></button>
+                </div>
+            </div>
+            <div class="question6">
+                <h2 id="question-6"></h2>
+                <div class="buttons-row">
+                    <button type="button" id="answer-6A" onclick="answer6A(), playAudio()"></button>
+                    <button type="button" id="answer-6B" onclick="answer6B(), playAudio()"></button>
+                </div>
+                <div class="buttons-row">
+                    <button type="button" id="answer-6C" onclick="answer6C(), playAudio()"></button>
+                    <button type="button" id="answer-6D" onclick="answer6D(), playAudio()"></button>
+                </div>
+            </div>
+            <div class="question7">
+                <h2 id="question-7"></h2>
+                <div class="buttons-row-small">
+                    <button type="button" id="answer-7A" onclick="answer7A(), playAudio()"></button>
+                    <button type="button" id="answer-7B" onclick="answer7B(), playAudio()"></button>
+                </div>
+                <div class="buttons-row-small">
+                    <button type="button" id="answer-7C" onclick="answer7C(), playAudio()"></button>
+                    <button type="button" id="answer-7D" onclick="answer7D(), playAudio()"></button>
+                </div>
+            </div>
+            <div class="question8">
+                <h2 id="question-8"></h2>
+                <div class="buttons-row-small">
+                    <button type="button" id="answer-8A" onclick="answer8A(), playAudio()"></button>
+                    <button type="button" id="answer-8B" onclick="answer8B(), playAudio()"></button>
+                </div>
+                <div class="buttons-row-small">
+                    <button type="button" id="answer-8C" onclick="answer8C(), playAudio()"></button>
+                    <button type="button" id="answer-8D" onclick="answer8D(), playAudio()"></button>
+                </div>
+            </div>
+            <div class="question9">
+                <h2 id="question-9">Did you put your name into the Goblet of Fire?! <br>Did you ask one of the older students to do it for you?</h2>
+                <div class="buttons-row-small">
+                    <button type="button" id="answer-9A" onclick="answer9A(), playAudio()">No, Sir!</button>
+                    <button type="button" id="answer-9B" onclick="answer9B(), playAudio()">So what if I did 'Big Al'?</button>
+                </div>
+            </div>
+
+            <!-- ENDGAME MODAL -->
+            <div id="myModal" class="modal">
+                <div class="modal-content" id="endScreen">
+                    <span class="close">&times;</span>
+                    <div class="traits">
+                        <p id="threeTraits"></p>
+                    </div>
+                    <div class="finalResultImg">
+                        <img id="finalResultImg" src="images/Sorting-Hat-icon.png" alt="The Sorting Hat">
+                    </div>
+                    <div class="finalResult">
+                        <h2 id="finalResult"></h2>
+                    </div>
+                    <div class="houseCrest">
+                        <img id="houseCrest" src="images/" alt="The House Crest">
+                    </div>
+                    <div class="welcomeMessage">
+                        <p id="welcomeMessage"></p>
+                    </div>
+                    <div class="houseDescription">
+                        <p id="houseDescription"></p>
+                    </div>
+                    <div class="scoreDisplay">
+                        <div id="gryffScore">
+                            <h2 id="gryffindor"></h2>
+                            <p>Courage</p>
+                            <p>Bravery</p>
+                            <p>Determination</p>
+                        </div>
+                        <div id="ravenScore"> 
+                            <h2 id="ravenclaw"></h2>
+                            <p>Wit</p>
+                            <p>Learning</p>
+                            <p>Wisdom</p>
+                        </div>
+                        <div id="huffleScore">
+                            <h2 id="hufflepuff"></h2>
+                            <p>Dedication</p>
+                            <p>Patience</p>
+                            <p>Loyalty</p>
+                        </div>
+                        <div id="slythScore">
+                            <h2 id="slytherin"></h2>
+                            <p>Pride</p>
+                            <p>Ambition</p>
+                            <p>Cunning</p>
+                        </div>
+                    </div>
+                    <div class="quoteContent">
+                        <p id="quoteContent"></p>
+                    </div>
+                    <div class="quotePerson">
+                        <p id="quotePerson"></p>
+                    </div>
+                    <div class="quoteSource">
+                        <p id="quoteSource"></p>
+                    </div>
+                    <div class="playAgain">
+                        <button id="playAgain">Retake Sorting Hat Ceremony?</button>
+                    </div>
+                </div>
+            </div>
+            <footer class="mainFooter">
+                <p><a href="https://github.com/nloc1929" target="#">Nicholas Locke</a></p>
+                <p><span id="date_year"></span></p>
+                <p>Please see <a href="credits.html">CREDITS</a> <br>for the sources to all Images, Sounds and Data used</p>
+                <!-- JAVASCRIPT FUNCTION TO DISPLAY CURRENT YEAR -->
+                <script>
+                    const getYear = new Date();
+                    document.getElementById('date_year').textContent = getYear.getFullYear();
+                </script>
+            </footer>
+        </div>
+        <!-- AUDIO FILES -->
+        <audio id="gryffindorAudio"><source src="audio/Gryffindor(edited).mp3"></audio>
+        <audio id="ravenclawAudio"><source src="audio/Ravenclaw(edited).mp3"></audio>
+        <audio id="hufflepuffAudio"><source src="audio/Hufflepuff(edited).mp3"></audio>
+        <audio id="slytherinAudio"><source src="audio/Slytherin(edited).mp3"></audio>
+        <audio id="buttonAudio"><source src="audio/magic(edited).mp3"></audio>
+        <audio id="restartAudio"><source src="audio/Royal-sparkle-woosh-centre.mp3"></audio>
+    </body>
+</html>

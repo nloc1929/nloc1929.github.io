@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang = "en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet"> 
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <title>Rock Paper Scissors Javascript Game</title>
+  </head>
+  <body id="page">
+    <!-- GAME TITLE -->
+    <div class="title" id="title">
+      <div class="title1"><h1>ROCK</h1></div>
+      <div class="title2"><h1>SCISSORS</h1></div>
+      <div class="title3"><h1>PAPER</h1></div>
+    </div>
+    <!-- GAME DESCRIPTION INFORMATION -->
+    <div class="gameDescription">
+      <div>
+        <h2>Rock? Paper? or Scissors?</h2>
+        <p>Choose wisely and defeat the Computer!</p>
+        <p>First to 5 points wins.</p>
+      </div>
+    </div>
+    <!-- RUNNING SCORE DISPLAY -->
+    <div class="scoreBoard">
+      <h2 id="playerPoints"></h2>
+      <h2 id="compPoints"></h2>
+    </div>
+
+    <!-- PLAYER BUTTONS -->
+    <div class="buttons">
+      <div>
+        <button id="userRock" onclick="playAudio()" type="button"><img src="images/stone.png"></button>
+      </div>
+      <div>
+        <button id="userScissors" onclick="playAudio()" type="button"><img src="images/scissors.png"></button>
+      </div>
+      <div>
+        <button id="userPaper" onclick="playAudio()" type="button"><img src="images/paper.png"></button>
+      </div>
+    </div>
+
+    <!-- INDIVIDUAL ROUND DISPLAY -->
+    <div class="selectDisplay">
+      <div>
+        <h2 id="compSelect"></h2>
+        <img id="compImg" src="images/rock-paper-scissors.png">
+      </div>
+      <div id="resultDiv">
+        <h2 id="result"></h2>
+        <img id="resultImg" src="images/rock-paper-scissors.png">
+      </div>
+    </div>
+
+    <!-- ENDGAME MODAL -->
+    <div id="myModal" class="modal">
+      <div class="modal-content" id="modalScreen">
+        <span class="close">&times;</span>
+        <div class="finalResult">
+          <h2 id="finalResult"></h2>
+        </div>
+        <div class="finalResultImg">
+          <img id="finalResultImg" src="images/rock-paper-scissors.png">
+        </div>
+        <div class="scoreDisplay">
+          <div>
+            <h2 id="playerScore"></h2>
+          </div>
+          <div>
+            <h2 id="compScore"></h2>
+          </div>
+        </div>
+        <div class="playAgain">
+          <button id="playAgain" onclick="restartGame(), playAudio()">PLAY AGAIN?</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- AUDIO FILES -->
+    <audio id="buttonAudio"><source src="audio/buttonClick.mp3"></audio>
+    <audio id="successAudio"><source src="audio/success.mp3"></audio>
+    <audio id="failureAudio"><source src="audio/failure.mp3"></audio>
+    <audio id="drawAudio"><source src="audio/drawSound.mp3"></audio>
+
+    <!-- FOOTER LINKS -->
+    <footer>
+      <div class="main_footer">
+        <a href="https://www.flaticon.com/free-icons/rock" title="rock icons">Rock icons created by Icongeek26 - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/paper" title="paper icons">Paper icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/scissors" title="scissors icons">Scissors icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-icons/rock-paper-scissors" title="rock-paper-scissors icons">Rock-paper-scissors icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-animated-icons/computer" title="computer animated icons">Computer animated icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-animated-icons/avatar" title="avatar animated icons">Avatar animated icons created by Freepik - Flaticon</a>
+        <a href="https://www.flaticon.com/free-animated-icons/hand" title="hand animated icons">Hand animated icons created by Freepik - Flaticon</a>
+      </div>
+      <div class="footer_credit">
+        <a href="https://github.com/nloc1929">Copyright &copy Nicholas Locke 2022</a>
+      </div>
+    </footer>
+    <!-- LINK TO JAVASCRIPT FILE -->
+    <script src="script.js"></script>
+  </body>
+</html>
