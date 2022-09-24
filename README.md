@@ -25,6 +25,7 @@ Currently it is showcasing only one Laravel project however more will be added s
 Two static sites using basic HTML, CSS, JavaScript, Bootstrap, and some PHP.
 
 ![](https://nloc1929.github.io/images/australianAnimalsGif.gif)
+
 ![](https://nloc1929.github.io/images/pianoTeacherGif.gif)
 
 
@@ -32,6 +33,7 @@ Two static sites using basic HTML, CSS, JavaScript, Bootstrap, and some PHP.
 Two simple JavaScript games I made whilst doing the Odin Project.
 
 ![](https://nloc1929.github.io/images/rockPaperScissorsGif.gif)
+
 ![](https://nloc1929.github.io/images/sortingHatGif.gif)
 
 
@@ -77,6 +79,6 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 ## Team
 
-[![Nicholas Locke](https://nloc1929.github.io/images/sortingHatGif.gif)](https://nicholaslockedeveloper.me/)
+[![Nicholas Locke](https://nloc1929.github.io/images/IMG20210306141154 (4).jpg)](https://nicholaslockedeveloper.me/)
 
 [Nicholas Locke ](https://github.com/nloc1929) 
