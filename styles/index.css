@@ -4,12 +4,18 @@
     .page {
         max-width: 40em;
     }
+    .site {
+        width: 30em;
+    }
 }
 /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */ 
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
     .page {
         max-width: 64em;
         min-width: 40.063em;
+    }
+    .site {
+        width: 60em;
     }
  } 
 /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */ 
