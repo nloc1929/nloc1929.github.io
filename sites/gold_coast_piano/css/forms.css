@@ -1,0 +1,353 @@
+/*RESPONSIVE LAYOUT*/
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */ 
+@media screen and (max-width: 40em) {
+    #page {
+        max-width: 40em;
+    }
+    #navIcon {
+        visibility: visible;
+        display: flex;
+    }
+    .main_navbar #myLinks {
+        display: none;
+        visibility: hidden;
+    }
+    #myLinks {
+        visibility: hidden;
+    }
+}
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */ 
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    #page {
+        max-width: 64em;
+        min-width: 40.063em;
+    }
+    #navIcon {
+        visibility: visible;
+        display: flex;
+    }
+    .main_navbar #myLinks {
+        display: none;
+        visibility: hidden;
+    }
+    #myLinks {
+        visibility: hidden;
+    }
+ } 
+/* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */ 
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+    #page {
+        max-width: 64.063em;
+        min-width: 90em;
+    }
+    #navIcon {
+        visibility: hidden;
+        display: none;
+    }
+    .main_navbar #myLinks {
+        display: flex;
+        visibility: visible;
+    }
+    #myLinks {
+        visibility: visible;
+    }
+ } 
+
+/* min-width 1440px, use when QAing very large screen-only issues */ 
+@media only screen and (min-width: 90em) {
+    #navIcon {
+        visibility: hidden;
+        display: none;
+    }
+    .main_navbar #myLinks {
+        display: flex;
+        visibility: visible;
+    }
+    #myLinks {
+        visibility: visible;
+    }
+}
+
+/* WEBPAGE BACKGROUND */
+#page {
+    background-color: #FFF;
+}
+
+/*============================================================== HEADER =======================================================================*/
+
+/* HEADER CSS */
+.main_header {
+    background-color: #000;
+    padding: 30px;
+    border-radius: 10px;
+}
+.logo_image {
+    display: flex;
+    align-content: center;
+}
+.logo_image img {
+    margin: auto;
+    border-radius: 40px;
+    padding: 20px;
+    max-width: 90%;
+} 
+
+/* NAVBAR CSS */
+.main_navbar {
+    display: flex;
+    align-content: space-around;
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+}
+.main_navbar ul {
+    list-style-type: none;
+    margin: auto;
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+    padding: 0;
+}
+.main_navbar li {
+    float: left;
+    margin: 10px;
+    padding-right: 10px;
+}
+.main_navbar li a {
+    color: #000;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.main_navbar li a:hover {
+    background-color: rgb(162, 166, 171, 0.7);
+    border-radius: 10px;
+}
+
+/*============================================================= FORM PAGES ====================================================================*/
+
+.form_heading {
+    display: flex;
+}
+.form_heading h1 {
+    margin: auto;
+    background-color: mediumseagreen;
+    color: #FFF;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    padding: 30px;
+    border-radius: 30px;
+    margin-top: 20px;
+    border-style: ridge;
+}
+.form_section {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    margin: 30px;
+}
+.form_section form {
+    margin: auto;
+    max-width: 100%;
+}
+.error {
+    color: red;
+    font-size: 14px;
+    margin: auto;
+}
+.success {
+    color: mediumseagreen;
+    font-size: 14px;
+    font-weight: bold;
+}
+.form_section label {
+    padding: 10px;
+    margin: 10px;
+}
+.form_section input, select, textarea {
+    width: 250px;
+    padding: 5px;
+    margin: 10px;                                                
+}
+.form_entry {
+    margin-top: 10px;
+}
+#prefEmail, #prefPhone {
+    width: 50px;
+    padding: 10px 0;
+    margin: 10px 0;
+}
+.submission {
+    display: flex;
+    transition: 0.3s;
+}
+.submission input {
+    margin: auto;
+    background-color: mediumseagreen;
+    background-image: linear-gradient(limegreen, mediumseagreen);
+    border-color: mediumseagreen;
+    border-style: solid;
+    border-radius: 10px;
+    color: #FFF;
+    width: 100px;
+    transition: 0.3s;
+}
+.submission input:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    cursor: pointer;
+}
+
+/*====================================================== FORM CONFIRMATION PAGE ==============================================================*/
+
+.confirmation_details {
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+.confirmation_details p {
+    margin: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    max-width: 70%;
+    text-align: center;
+    padding: 10px;
+}
+.confirmation_details a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #1e73be;
+}
+
+/* SECONDARY NAVIGATION CSS */
+.secondary_nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.secondary_nav div {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    background-color: #FFF;
+    width: 80%;
+}
+.row_one a, .row_two a {
+    margin: 5px;
+    padding: 16px;
+    width: 180px;
+    height: 38px;
+    min-width: 75px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #FFF;
+    border-style: solid;
+    border-color: #1e73be;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #1e73be;
+    font-weight: bold;
+    transition: 0.7s;
+}
+.row_one a:hover, .row_two a:hover {
+    background-color: #1e73be;
+    color: #FFF;
+    transform: scale(1.05);
+    box-shadow: #8fbee8 0px 0px 20px 5px;
+}
+
+/*========================================================= DATABASE SEARCH PAGE ==============================================================*/
+
+/* DATABASE SEARCH: DATABASE TABLE */
+.table {
+    display: flex;
+    overflow-x: scroll;
+}
+.table-admin {
+    height: 40%;
+    max-width: 90%;
+    left: 10%;
+    margin: auto;
+    overflow-y: scroll;
+    position: static;
+    font-family: 'Roboto', sans-serif;
+  }
+thead th {
+    background: #1e73be;
+    color: #FFF;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+tr {
+    background: #f4f7f8;
+    border-bottom: 1px solid #FFF;
+    margin-bottom: 5px;
+}
+th, td { 
+    font-size: 16px;
+    font-weight: 400;
+    padding: 16px;
+    text-align: left;
+    width: 20%;
+}
+
+/*=============================================================== FOOTER ======================================================================*/
+
+/* FOOTER CSS */
+.main_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #000;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: #FFF;
+    border-radius: 8px;
+    font-family: 'Playfair Display', serif;
+}
+.main_footer div {
+    flex-wrap: wrap;
+}
+.footer_left {
+    display: flex;
+    text-align: left;
+    max-width: 50%;
+}
+.footer_left ul {
+    list-style-type: none;
+}
+.footer_left li {
+    margin: 10px;
+}
+.footer_left li a {
+    color: #FFF;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.footer_left li a:hover {
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.footer_center {
+    max-width: 20%;
+}
+.footer_center img {
+    border-radius: 10px;
+    max-width: 50%;
+}
+.footer_right {
+    max-width: 30%;
+}
+.footer_right p {
+    text-align: left;
+}
+/* KEYFRAME ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0} to {opacity: 1};
+}

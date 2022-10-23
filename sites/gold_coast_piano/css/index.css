@@ -1,0 +1,381 @@
+/*RESPONSIVE LAYOUT*/
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */ 
+@media screen and (max-width: 40em) {
+    #page {
+        max-width: 40em;
+    }
+    .panel_container, .panel_text, .summary_text {
+        min-width: 95%;
+        width: 95%;
+    }
+    .carousel_main img {
+        min-width: 100%;
+        width: 100%;
+    }
+    #lessonFlip {
+        flex-direction: column-reverse;
+        margin-left: 0;
+    }
+    .icon {
+        visibility: visible;
+    }
+    .main_navbar #myLinks {
+        display: none;
+        visibility: hidden;
+    }
+    
+}
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */ 
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    #page {
+        max-width: 64em;
+        min-width: 40.063em;
+    }
+    .panel_container, .panel_text, .summary_text {
+        min-width: 95%;
+        width: 95%;
+    }
+
+    .panel_container img {
+        min-width: 98%;
+        width: 98%;
+    }
+
+    .carousel_main img {
+        min-width: 100%;
+        width: 100%;
+    }
+    #lessonFlip {
+        flex-direction: column-reverse;
+        margin-left: 0;
+    }
+    .icon {
+        visibility: visible;
+    }
+    .main_navbar #myLinks {
+        display: none;
+        visibility: hidden;
+    }
+ } 
+/* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */ 
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+    #page {
+        max-width: 64.063em;
+        min-width: 90em;
+    }
+    #navIcon {
+        visibility: hidden;
+        display: none;
+    }
+    .main_navbar #myLinks {
+        display: flex;
+        visibility: visible;
+    }
+    #myLinks {
+        visibility: visible;
+    }
+ } 
+
+ /* min-width 1440px, use when QAing very large screen-only issues */ 
+@media only screen and (min-width: 90em) {
+    #navIcon {
+        visibility: hidden;
+        display: none;
+    }
+    .main_navbar #myLinks {
+        display: flex;
+        visibility: visible;
+    }
+    #myLinks {
+        visibility: visible;
+    }
+}
+
+/* WEBPAGE BACKGROUND */
+#page {
+    background-color: #FFF;
+}
+
+/*============================================================== HEADER =======================================================================*/
+
+/* HEADER CSS */
+.main_header {
+    background-color: #000;
+    padding: 30px;
+    border-radius: 10px;
+}
+.logo_image {
+    display: flex;
+    align-content: center;
+}
+.logo_image img {
+    margin: auto;
+    border-radius: 40px;
+    padding: 20px;
+    max-width: 90%;
+}
+
+/* NAVBAR CSS */
+.main_navbar {
+    display: flex;
+    align-content: space-around;
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+}
+.main_navbar ul {
+    list-style-type: none;
+    margin: auto;
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+    padding: 0;
+}
+.main_navbar li {
+    float: left;
+    margin: 10px;
+    padding-right: 10px;
+}
+.main_navbar li a {
+    color: #000;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.main_navbar li a:hover {
+    background-color: rgb(162, 166, 171, 0.7);
+    border-radius: 10px;
+}
+
+
+.main_navbar #myLinks {
+    display:flex;
+}
+
+
+
+/*=========================================================== HOME PAGE ======================================================================*/
+
+/* HOME PAGE: CAROUSEL IMAGES */
+.carousel_main {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    animation: fadeIn 3s forwards;
+}
+.carousel_main img {
+    margin: auto;
+    max-height: 70%;
+    max-width: 80%;
+    border-radius: 10px;
+}
+
+/* HOME PAGE: MAIN SUMMARY TEXT BOX */
+.summary_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 80%;
+    margin-left: 40px;
+    background-color: #1e73be;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFF;
+    animation: fadeIn 3s forwards;
+    border-radius: 10px;
+    padding: 10px;
+}
+.summary_text h1 {
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    transition: 0.4s;
+}
+.summary_text h1:hover {
+    transform: scale(1.1);
+}
+.summary_text hr {
+    display: block;
+    position: relative;
+    width: 80%;
+    max-width: 80%;
+    color: #FFF;
+    border-top-width: 2px;
+    border-color: #FFF;
+}
+.summary_text {
+    margin: auto;
+    text-align: center;
+    transition: 0.4s;
+}
+.summary_text:hover {
+    transform: scale(1.04);
+}
+.summary_text p:hover {
+    filter: brightness(1.1);
+}
+.highlight_text {
+    font-weight: bold;
+}
+
+/*HOME PAGE: FREE LESSON, PRICING SUMMARY, and CONCERTS SUMMARY PANEL*/
+.panel_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    animation: fadeIn 3s forwards;
+}
+.panel_container img {
+    max-width: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+.panel_container img:hover {
+    transform: scale(1.03);
+}
+.panel_container .panel_text {
+    max-width: 60%;
+    margin: auto;
+    padding: 30px 14px;
+    background-color: #1e73be;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFF;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+.panel_text:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+.panel_text h2 {
+    text-align: center;
+    transition: 0.4s;
+}
+.panel_text h2 a {
+    text-align: center;
+    color: #FFF;
+    text-decoration: none;
+    transition: 0.4s;
+}
+.panel_text h2:hover {
+    transform: scale(1.1);
+}
+.panel_container hr {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    color: #FFF;
+    border-top-width: 2px;
+    border-color: #FFF;
+}
+.panel_text p {
+    text-align: center;
+}
+.panel_text p a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* SECONDARY NAVIGATION CSS */
+.secondary_nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.secondary_nav div {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    background-color: #FFF;
+    width: 80%;
+}
+.row_one a, .row_two a {
+    margin: 5px;
+    padding: 16px;
+    width: 180px;
+    height: 38px;
+    min-width: 75px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #FFF;
+    border-style: solid;
+    border-color: #1e73be;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #1e73be;
+    font-weight: bold;
+    transition: 0.7s;
+}
+.row_one a:hover, .row_two a:hover {
+    background-color: #1e73be;
+    color: #FFF;
+    transform: scale(1.05);
+    box-shadow: #8fbee8 0px 0px 20px 5px;
+}
+
+/*=============================================================== FOOTER ======================================================================*/
+
+/* FOOTER CSS */
+.main_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #000;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: #FFF;
+    border-radius: 8px;
+    font-family: 'Playfair Display', serif;
+}
+.main_footer div {
+    flex-wrap: wrap;
+}
+.footer_left {
+    display: flex;
+    text-align: left;
+    max-width: 50%;
+}
+.footer_left ul {
+    list-style-type: none;
+}
+.footer_left li {
+    margin: 10px;
+}
+.footer_left li a {
+    color: #FFF;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.footer_left li a:hover {
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.footer_center {
+    max-width: 20%;
+}
+.footer_center img {
+    border-radius: 10px;
+    max-width: 50%;
+}
+.footer_right {
+    max-width: 30%;
+}
+.footer_right p {
+    text-align: left;
+}
+/* KEYFRAME ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0} to {opacity: 1};
+}

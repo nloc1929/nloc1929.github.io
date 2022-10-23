@@ -1,0 +1,456 @@
+/*RESPONSIVE LAYOUT*/
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */ 
+@media screen and (max-width: 40em) {
+    #page {
+        max-width: 40em;
+    }
+    .pricing_info_text, .terms_conditions_text {
+        min-width: 100%;
+        width: 100%;
+    }
+    #conditionsText {
+        margin: 10px;
+    }
+    .icon {
+        visibility: visible;
+    }
+    .main_navbar #myLinks {
+        display: none;
+        visibility: hidden;
+    }
+}
+/* min-width 641px and max-width 1024px, use when QAing tablet-only issues */ 
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    #page {
+        max-width: 64em;
+        min-width: 40.063em;
+    }
+    #navIcon {
+        visibility: visible;
+        display: flex;
+    }
+    .main_navbar #myLinks {
+        display: none;
+        visibility: hidden;
+    }
+    #myLinks {
+        visibility: hidden;
+    }
+ } 
+/* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */ 
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+    #page {
+        min-width: 64.063em;
+        max-width: 90em;
+    }
+    #navIcon {
+        visibility: hidden;
+        display: none;
+    }
+    .main_navbar #myLinks {
+        display: flex;
+        visibility: visible;
+    }
+    #myLinks {
+        visibility: visible;
+    }
+ } 
+
+ /* min-width 1440px, use when QAing very large screen-only issues */ 
+ @media only screen and (min-width: 90em) {
+    #navIcon {
+        visibility: hidden;
+        display: none;
+    }
+    .main_navbar #myLinks {
+        display: flex;
+        visibility: visible;
+    }
+    #myLinks {
+        visibility: visible;
+    }
+}
+/* WEBPAGE BACKGROUND */
+#page {
+    background-color: #FFF;
+}
+
+/*============================================================== HEADER =======================================================================*/
+
+/* HEADER CSS */
+.main_header {
+    background-color: #000;
+    padding: 30px;
+    border-radius: 10px;
+}
+.logo_image {
+    display: flex;
+    align-content: center;
+}
+.logo_image img {
+    margin: auto;
+    border-radius: 40px;
+    padding: 20px;
+    max-width: 90%;
+}
+
+/* NAVBAR CSS */
+.main_navbar {
+    display: flex;
+    align-content: space-around;
+    overflow: hidden;
+    font-family: 'Playfair Display', serif;
+}
+.main_navbar ul {
+    list-style-type: none;
+    margin: auto;
+    background-color: rgb(236, 236, 236);
+    border-radius: 10px;
+    padding: 0;
+}
+.main_navbar li {
+    float: left;
+    margin: 10px;
+    padding-right: 10px;
+}
+.main_navbar li a {
+    color: #000;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.main_navbar li a:hover {
+    background-color: rgb(162, 166, 171, 0.7);
+    border-radius: 10px;
+}
+
+/*=========================================================== PRICING PAGE ====================================================================*/
+
+/* PRICING PAGE: PRICING INFO PANEL */
+.pricing_info_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 100%;
+    margin: 20px;
+    animation: fadeIn 3s forwards;
+}
+.pricing_info_container img{
+    max-width: 40%;
+    max-height: 100%;
+    margin: 14px;
+    align-self: flex-start;
+    border-radius: 10px;
+}
+.pricing_info_text {
+    width: 100%;
+    max-width: 100%;
+    padding: 30px 14px;
+    background-color: #1e73be;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFF;
+    border-radius: 10px;
+}
+.pricing_info_text h1 {
+    text-align: center;
+    padding: 5px;
+}
+.pricing_info_container hr {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    color: #FFF;
+    border-top-width: 2px;
+    border-color: #FFF;
+}
+.pricing_info_text p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.pricing_info_text ul {
+    text-align: left;
+}
+
+/* PRICING PAGE: FEE TABLE */
+.table_section {
+    display: flex;
+    margin: 40px;
+}
+.fee_table {
+    height: 40%;
+    width: 30%;
+    max-width: 30%;
+    margin: auto;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    position: static;
+    border-style: solid;
+    border-color: #FFF;
+}
+.table_head {
+    margin: auto;
+    text-align: center; 
+    font-weight: bold;
+    border-bottom: 2px solid #FFF;
+}
+thead th {
+    background: #1e73be;
+    font-weight: bold;
+}
+tr {
+    margin-bottom: 5px;
+}
+th, td {
+    font-size: 14px;
+    padding: 8px;
+    text-align: center;
+    width: 20%;
+    border: 1px solid #FFF;
+}
+.table_side {
+    text-align: center; 
+    font-weight: bold;
+    border-bottom: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+}
+.table_left {
+    text-align: center; 
+    font-weight: bold;
+    border-right: 2px solid #FFF;
+}
+
+/* PRICING PAGE: FEE LIST */
+.pricing_info_text div {
+    margin: auto;
+}
+.fee_structure {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0px;
+    margin: auto;
+    text-align: center;
+}
+.fee_structure div{
+    margin: 30px 5px;
+}
+.fee_structure hr {
+    width: 80%;
+}
+.fee_structure ul {
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+/* PRICING PAGE: CONTACT US BIG BUTTON */
+.contact_button {
+    margin: auto;
+}
+.contact_button a {
+    display: flex;
+    margin: auto;
+    background-color: mediumseagreen;
+    background-image: linear-gradient(limegreen, mediumseagreen);
+    max-width: 70%;
+    border-radius: 12px;
+    flex-direction: row;
+    text-decoration: none;
+    border-style: solid;
+    border-color: mediumseagreen;
+    transition: 0.5s;
+    padding: 5px;
+}
+.contact_button a:hover {
+    transform: scale(1.05);
+    filter:brightness(1.1);
+    border-color: mediumseagreen;
+}
+.contact_button img {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+}
+.contact_button h2 {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    color: #FFF;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/* PRICING PAGE: FREE LESSON BIG BUTTON */
+.free_lesson_button {
+    display: flex;
+    margin: auto;
+    animation: fadeIn 3s forwards;
+}
+.free_lesson_button a {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    text-decoration: none;
+    background-color: #1e73be;
+    max-width: 90%;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding: 20px;
+    border-style: solid;
+    border-color: #1e73be;
+    transition: 0.5s;
+}
+.free_lesson_button a:hover {
+    transform: scale(1.05);
+    background-color: mediumseagreen;
+    background-image: linear-gradient(limegreen, mediumseagreen);
+    border-color: mediumseagreen;
+}
+.free_lesson_button img {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+}
+.free_lesson_button h2 {
+    font-family: 'Open Sans', sans-serif;
+    color: #FFF;
+    text-align: center;
+    font-size: 26px;
+    padding: 0px 10px;
+}
+
+/* PRICING PAGE: LEARNING APPROACH TEXT BOX */
+.terms_conditions_text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 90%;
+    background-color: #1e73be;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFF;
+    animation: fadeIn 3s forwards;
+    border-radius: 10px;
+}
+.terms_conditions_header {
+    margin: auto;
+}
+.terms_conditions_text hr {
+    display: block;
+    position: relative;
+    width: 80%;
+    max-width: 80%;
+    color: #FFF;
+    border-top-width: 2px;
+    border-color: #FFF;
+}
+.terms_conditions_text {
+    margin: auto;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.highlight_text {
+    font-weight: bold;
+}
+.terms_conditions_text ul {
+    padding-left: 15px;
+}
+
+/* SECONDARY NAVIGATION CSS */
+.secondary_nav {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.secondary_nav div {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    background-color: #FFF;
+    width: 80%;
+}
+.row_one a, .row_two a {
+    margin: 5px;
+    padding: 16px;
+    width: 180px;
+    height: 38px;
+    min-width: 75px;
+    font-size: 15px;
+    text-align: center;
+    background-color: #FFF;
+    border-style: solid;
+    border-color: #1e73be;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    color: #1e73be;
+    font-weight: bold;
+    transition: 0.7s;
+}
+.row_one a:hover, .row_two a:hover {
+    background-color: #1e73be;
+    color: #FFF;
+    transform: scale(1.05);
+    box-shadow: #8fbee8 0px 0px 20px 5px;
+}
+
+/*=============================================================== FOOTER ======================================================================*/
+
+/* FOOTER CSS */
+.main_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #000;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
+    color: #FFF;
+    border-radius: 8px;
+    font-family: 'Playfair Display', serif;
+}
+.main_footer div {
+    flex-wrap: wrap;
+}
+.footer_left {
+    display: flex;
+    text-align: left;
+    max-width: 50%;
+}
+.footer_left ul {
+    list-style-type: none;
+}
+.footer_left li {
+    margin: 10px;
+}
+.footer_left li a {
+    color: #FFF;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.footer_left li a:hover {
+    font-weight: bold;
+    transform: scale(1.05);
+}
+.footer_center {
+    max-width: 20%;
+}
+.footer_center img {
+    border-radius: 10px;
+    max-width: 50%;
+}
+.footer_right {
+    max-width: 30%;
+}
+.footer_right p {
+    text-align: left;
+}
+/* KEYFRAME ANIMATION */
+@keyframes fadeIn {
+    from {opacity: 0} to {opacity: 1};
+}
