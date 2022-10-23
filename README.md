@@ -40,7 +40,7 @@ Two simple JavaScript games I made whilst doing the Odin Project.
 ## Mobile support
 The projects are compatible with devices of all sizes and all OS's, and consistent improvements are being made.
 
-![](https://iharsh234.github.io/WebApp/images/demo/mobile.png)
+![](https://nloc1929.github.io/images/mobile_viewport_example.png)
 
 
 
